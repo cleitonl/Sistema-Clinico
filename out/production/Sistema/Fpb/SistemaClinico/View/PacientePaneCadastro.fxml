@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="janelaCadastro" prefHeight="400.0" prefWidth="600.0" stylesheets="@home.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fpb.SistemaClinico.Controller.Pacientes.PacientePaneCadastroController">
+   <children>
+      <Label layoutX="14.0" layoutY="8.0" text="Paciente"><font><Font name="System Bold" size="26.0" /></font></Label>
+
+               <Label layoutX="28.0" layoutY="91.0" text="Nome" AnchorPane.leftAnchor="28.0" />
+               <TextField fx:id="fieldNome" layoutX="81.0" layoutY="87.0" prefHeight="25.0" prefWidth="411.0" AnchorPane.leftAnchor="81.0" />
+
+                  <Label layoutX="28.0" layoutY="142.0" text="Rg" AnchorPane.leftAnchor="28.0" />
+                  <TextField fx:id="fieldRg" layoutX="81.0" layoutY="138.0" prefHeight="25.0" prefWidth="219.0" AnchorPane.leftAnchor="81.0" />
+         <TextField fx:id="fieldCpf" layoutX="354.0" layoutY="138.0" prefHeight="25.0" prefWidth="219.0" />
+
+                     <Label layoutX="28.0" layoutY="192.0" text="Endereço" AnchorPane.leftAnchor="28.0" />
+                     <TextField fx:id="fieldEndereco" layoutX="81.0" layoutY="188.0" prefHeight="25.0" prefWidth="492.0" AnchorPane.leftAnchor="81.0" />
+
+                        <Label layoutX="28.0" layoutY="242.0" text="Telefone" AnchorPane.leftAnchor="28.0" />
+                        <TextField fx:id="fieldTelefone" layoutX="81.0" layoutY="238.0" prefHeight="25.0" prefWidth="219.0" AnchorPane.leftAnchor="81.0" />
+         <ImageView fitHeight="89.0" fitWidth="50.0" layoutX="525.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <image>
+               <Image url="@Img/imgPaciente.png" />
+            </image>
+         </ImageView>
+      <ComboBox fx:id="comboSexo" layoutX="396.0" layoutY="263.0" prefHeight="25.0" prefWidth="177.0" />
+      <ComboBox fx:id="comboConvenio" layoutX="81.0" layoutY="288.0" prefHeight="25.0" prefWidth="219.0" AnchorPane.leftAnchor="81.0" />
+      <Label layoutX="28.0" layoutY="293.0" text="Convenio" AnchorPane.leftAnchor="28.0" />
+      <Label layoutX="354.0" layoutY="267.0" text="Sexo" />
+
+         <Label layoutX="318.0" layoutY="142.0" text="Cpf" />
+      <Button fx:id="btnLimpar" layoutX="206.0" layoutY="354.0" mnemonicParsing="false" onAction="#limparFields" styleClass="btnLimpar" text="Limpar" />
+      <Button fx:id="btnSalvar" layoutX="469.0" layoutY="354.0" mnemonicParsing="false" onAction="#salvarPaciente" styleClass="btnSalvar" text="Salvar" />
+      <Button fx:id="btnAtualizar" layoutX="338.0" layoutY="354.0" mnemonicParsing="false" onAction="#atualizarPaciente" text="Atualizar">
+         <styleClass>
+            <String fx:value="btnLimpar" />
+            <String fx:value="btnEditar" />
+         </styleClass></Button>
+
+   </children>
+</AnchorPane>
